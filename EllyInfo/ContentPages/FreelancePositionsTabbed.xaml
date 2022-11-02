@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:local="clr-namespace:EllyInfo.ContentPages;assembly=EllyInfo"
+                        xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+                        x:Class="EllyInfo.ContentPages.FreelancePositionsTabbed">
+
+    <NavigationPage Title="Okky" IconImageSource="{StaticResource TabOne}">
+        <x:Arguments>
+            <local:FreelancePositions Title="Okky"></local:FreelancePositions>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="WishCat" IconImageSource="{StaticResource TabTwo}">
+        <x:Arguments>
+            <local:FreelancePositions Title="WishCat"></local:FreelancePositions>
+        </x:Arguments>
+    </NavigationPage>    
+</TabbedPage>

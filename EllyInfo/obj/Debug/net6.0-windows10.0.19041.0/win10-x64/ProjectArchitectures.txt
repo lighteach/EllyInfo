@@ -1,0 +1,1 @@
+C:\DevArea\EllyInfo\EllyInfo\EllyInfo.csproj;x64

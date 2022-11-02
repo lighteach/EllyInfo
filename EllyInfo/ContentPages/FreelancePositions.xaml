@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EllyInfo.ContentPages.FreelancePositions"
+             x:Name="cpFreelance"
+             Title="FreelancePositions">
+    <!-- 이렇게 하면 상단 타이틀바 우측에 로고를 넣을 수 있다고 생각했다 -->
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="EllyInfo" IconImageSource="logo_ellyinfo.png" />
+    </ContentPage.ToolbarItems>-->
+    
+    <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10" Margin="15,15,15,15">
+        <!-- 상단 타이틀 패널 -->
+        <Grid ColumnDefinitions="*,Auto" Padding="0,15,0,15" HeightRequest="75">
+            <!-- 좌측 페이지 제목 -->
+            <Grid Grid.Column="0" HorizontalOptions="StartAndExpand" ColumnDefinitions="*" RowDefinitions="28,20" Padding="0,15,20,15" WidthRequest="360" HeightRequest="75">
+                <Label Grid.Row="0" Text="Freelance Positions" TextColor="Black" FontSize="25" HorizontalOptions="Fill" FontAttributes="Bold" />
+                <Label Grid.Row="1" Text="Collections of freelance positions site scrapping" TextColor="Black" FontSize="14" HorizontalOptions="Fill" VerticalTextAlignment="Center" />
+            </Grid>
+            <!-- 우측 Provided by -->
+            <Border Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End" Stroke="{StaticResource NewTitleBar}" StrokeThickness="4" Background="#2B0B98" Padding="16,7,18,10" HeightRequest="50">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="40,0,0,40" />
+                </Border.StrokeShape>
+                <Border.Shadow>
+                    <Shadow />
+                </Border.Shadow>
+                <VerticalStackLayout>
+                    <Label Text="Provided by" TextColor="White" FontSize="8" FontAttributes="Bold" />
+                    <Label Text="OKKY" TextColor="White" FontSize="18" FontAttributes="Bold" />
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+
+        <!-- 포지션 리스트 -->
+        <ScrollView>
+            <CollectionView ItemsSource="{Binding JobDatas}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource EdgePanelStyle}" Margin="5,0,0,0" Stroke="{StaticResource NewTitleBar}" StrokeThickness="1">
+                            <Grid ColumnDefinitions="Auto,*" Margin="5,0,0,0" Padding="10,10,10,10" HeightRequest="50">
+                                <Frame Grid.Column="0" CornerRadius="50" WidthRequest="30" HeightRequest="30" BorderColor="Transparent" HorizontalOptions="StartAndExpand" Padding="0,0,0,0" Margin="0,0,0,0">
+                                    <Frame.Background>
+                                        <LinearGradientBrush EndPoint="1,0">
+                                            <GradientStop Color="#8A6ACC" Offset="0.1" />
+                                            <GradientStop Color="#CABBE8" Offset="1.0" />
+                                        </LinearGradientBrush>
+                                    </Frame.Background>
+                                    <Label Text="SI" FontSize="20" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" />
+                                </Frame>
+                                <Grid Grid.Column="1" HorizontalOptions="StartAndExpand" ColumnDefinitions="*" RowDefinitions="2,18,16" Padding="10,10,10,10" HeightRequest="50">
+                                    <Label Grid.Row="1" Text="{Binding ProjectTitle}" TextColor="Black" FontSize="16" HorizontalOptions="Fill" FontFamily="Segoe UI" />
+                                    <Label Grid.Row="2" Text="{Binding Location}" TextColor="Black" FontSize="9" HorizontalOptions="Fill" VerticalTextAlignment="Center" />
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+        
+    </VerticalStackLayout>
+</ContentPage>

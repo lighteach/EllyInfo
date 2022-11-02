@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="EllyInfo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:EllyInfo"
+    xmlns:localPage="clr-namespace:EllyInfo.ContentPages"
+    FlyoutIcon="icon_hamburger_menu.png"
+    BackgroundColor="{StaticResource NewTitleBar}"
+    Shell.FlyoutBehavior="Flyout">
+
+    <!-- 쉘에는 그라데이션이 쳐먹질 않음, 이미 깃허브에 해당 이슈가 버그로 등록되어 있음. 시간을 기다려보자.. -->
+    <!--<Shell.Background>
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="{StaticResource NewTitleBar}" Offset="0.1" />
+            <GradientStop Color="{StaticResource NewBgColor}" Offset="1.0" />
+        </LinearGradientBrush>
+    </Shell.Background>-->
+
+    <Shell.TitleView>
+        <Grid ColumnDefinitions="*, 200, 5" VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="5" />
+            </Grid.RowDefinitions>
+            <!--<Label Grid.Row="1"  Grid.Column="1" Text="EllyInfo Title" TextColor="White" FontSize="Large" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />-->
+            <StackLayout Grid.Row="1"  Grid.Column="1" HorizontalOptions="EndAndExpand" Orientation="Horizontal" VerticalOptions="Center" Margin="0,0,10,0">
+                <Image Source="logo_ellyinfo_gray.png" WidthRequest="100" />
+            </StackLayout>
+        </Grid>
+    </Shell.TitleView>
+
+    <FlyoutItem Title="Freelance Positions" FlyoutIcon="dotnet_bot.png">
+        <ShellContent Title="Freelance Positions" ContentTemplate="{DataTemplate localPage:FreelancePositions}"></ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Skill Manage" FlyoutIcon="dotnet_bot.png">
+        <ShellContent Title="Skill Manage" ContentTemplate="{DataTemplate localPage:SkillManage}"></ShellContent>
+    </FlyoutItem>    
+    
+
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate localPage:FreelancePositions}"
+        Route="MainPage" />-->
+
+</Shell>
