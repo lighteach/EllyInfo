@@ -1,0 +1,12 @@
+C:\DevArea\EllyInfo\DataLinkage\bin\Debug\net6.0\DataLinkage.deps.json
+C:\DevArea\EllyInfo\DataLinkage\bin\Debug\net6.0\DataLinkage.dll
+C:\DevArea\EllyInfo\DataLinkage\bin\Debug\net6.0\DataLinkage.pdb
+C:\DevArea\EllyInfo\DataLinkage\obj\Debug\net6.0\DataLinkage.csproj.AssemblyReference.cache
+C:\DevArea\EllyInfo\DataLinkage\obj\Debug\net6.0\DataLinkage.GeneratedMSBuildEditorConfig.editorconfig
+C:\DevArea\EllyInfo\DataLinkage\obj\Debug\net6.0\DataLinkage.AssemblyInfoInputs.cache
+C:\DevArea\EllyInfo\DataLinkage\obj\Debug\net6.0\DataLinkage.AssemblyInfo.cs
+C:\DevArea\EllyInfo\DataLinkage\obj\Debug\net6.0\DataLinkage.csproj.CoreCompileInputs.cache
+C:\DevArea\EllyInfo\DataLinkage\obj\Debug\net6.0\DataLinkage.dll
+C:\DevArea\EllyInfo\DataLinkage\obj\Debug\net6.0\refint\DataLinkage.dll
+C:\DevArea\EllyInfo\DataLinkage\obj\Debug\net6.0\DataLinkage.pdb
+C:\DevArea\EllyInfo\DataLinkage\obj\Debug\net6.0\ref\DataLinkage.dll
