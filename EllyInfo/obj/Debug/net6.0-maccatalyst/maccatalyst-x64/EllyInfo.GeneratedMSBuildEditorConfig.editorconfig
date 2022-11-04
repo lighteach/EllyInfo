@@ -27,6 +27,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = EllyInfo.ContentPages.Free
 build_metadata.AdditionalFiles.TargetPath = ContentPages\FreelancePositions.xaml
 build_metadata.AdditionalFiles.RelativePath = ContentPages\FreelancePositions.xaml
 
+[C:/DevArea/EllyInfo/EllyInfo/ContentPages/FreelancePositionsDetail.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EllyInfo.ContentPages.FreelancePositionsDetail.xaml
+build_metadata.AdditionalFiles.TargetPath = ContentPages\FreelancePositionsDetail.xaml
+build_metadata.AdditionalFiles.RelativePath = ContentPages\FreelancePositionsDetail.xaml
+
 [C:/DevArea/EllyInfo/EllyInfo/ContentPages/FreelancePositionsTabbed.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = EllyInfo.ContentPages.FreelancePositionsTabbed.xaml

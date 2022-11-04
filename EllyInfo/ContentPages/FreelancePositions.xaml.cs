@@ -6,6 +6,8 @@ namespace EllyInfo.ContentPages;
 
 public partial class FreelancePositions : ContentPage, INotifyPropertyChanged
 {
+    private IJobDataLinkage _currentLinkage = null;
+
 	public FreelancePositions()
 	{
 		InitializeComponent();
@@ -17,7 +19,10 @@ public partial class FreelancePositions : ContentPage, INotifyPropertyChanged
 
     private void BindJobDatas()
     {
-        IJobDataLinkage linkage = new OkkyDataLinkage();
+        // 일단 현재 포지션 제공자가 누군지 저장한다.
+        _currentLinkage = new OkkyDataLinkage();
+
+        IJobDataLinkage linkage = _currentLinkage;
         List<JobDataModel> list = linkage.GetList();
         foreach (JobDataModel jdm in list)
         {
@@ -41,4 +46,12 @@ public partial class FreelancePositions : ContentPage, INotifyPropertyChanged
 
     ObservableCollection<JobDataModel> _jobDatas = new ObservableCollection<JobDataModel>();
     public ObservableCollection<JobDataModel> JobDatas => _jobDatas;
+
+    private async void collviewJobDatas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        JobDataModel current = (e.CurrentSelection.FirstOrDefault() as JobDataModel);
+        string moveUrl = $"{_currentLinkage.ScrapingTargetMainUrl}{current.DetailViewUrl}";
+        await Application.Current.MainPage.Navigation.PushModalAsync(new FreelancePositionsDetail { TargetUrl = moveUrl });
+        //await Launcher.Default.OpenAsync(moveUrl);
+    }
 }

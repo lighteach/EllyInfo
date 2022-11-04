@@ -7,8 +7,14 @@
     <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
     <DefaultDevice>pixel_5_-_api_30</DefaultDevice>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-android|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
   <ItemGroup>
     <MauiXaml Update="ContentPages\FreelancePositions.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ContentPages\FreelancePositionsDetail.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="ContentPages\FreelancePositionsTabbed.xaml">
