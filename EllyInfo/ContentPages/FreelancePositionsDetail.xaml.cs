@@ -16,4 +16,9 @@ public partial class FreelancePositionsDetail : ContentPage
 			wvDetail.Source = new UrlWebViewSource { Url = value };
 		}
 	}
+
+	private void btnClose_Clicked(object sender, EventArgs e)
+	{
+		App.Current.MainPage.Navigation.PopModalAsync();
+	}
 }
