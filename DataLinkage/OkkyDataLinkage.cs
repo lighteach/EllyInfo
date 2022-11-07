@@ -44,6 +44,18 @@ namespace DataLinkage
                 , EtcInfos = $"급여일:{tk["recruitResponse"]?["payDay"]?.ToString()}"
             }).ToList();
 
+            // 데이터 가공(서초구, 강남구 우선)
+            if (result.Exists(jdm => jdm.Location.Contains("서초구") || jdm.Location.Contains("강남구")))
+            {
+                result.Where(jdm => jdm.Location.Contains("서초구") || jdm.Location.Contains("강남구"))
+                    .ToList().ForEach(jdm =>
+                    {
+                        int idx = result.IndexOf(jdm);
+                        result.RemoveAt(idx);
+                        result.Insert(0, jdm);
+                    });
+            }
+
             return result;
         }
     }
