@@ -3,10 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EllyInfo.ContentPages.SkillManage"
              Title="SkillManage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Here is Skill Management Page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10" Margin="15,15,15,15">
+            <!-- 상단 타이틀 패널 -->
+            <Grid ColumnDefinitions="*,Auto" Padding="0,15,0,15" HeightRequest="75">
+                <!-- 좌측 페이지 제목 -->
+                <Grid Grid.Column="0" HorizontalOptions="StartAndExpand" ColumnDefinitions="*" RowDefinitions="28,20" Padding="0,15,20,15" WidthRequest="360" HeightRequest="75">
+                    <Label Grid.Row="0" Text="Skill Manage" TextColor="Black" FontSize="25" HorizontalOptions="Fill" FontAttributes="Bold" />
+                    <Label Grid.Row="1" Text="Update current my skills or career" TextColor="Black" FontSize="14" HorizontalOptions="Fill" VerticalTextAlignment="Center" />
+                </Grid>
+            </Grid>
+
+            <CollectionView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Stroke="Black" StrokeThickness="1">
+                            
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

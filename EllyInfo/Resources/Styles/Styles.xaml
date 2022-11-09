@@ -394,4 +394,8 @@
     </Style>
 
     <FontImage x:Key="TabOne" FontFamily="FontAwesome" Size="22" Color="{StaticResource Primary}" Glyph="{x:Static local:IconFont.DiceOne}" />
+    <FontImage x:Key="TabTwo" FontFamily="FontAwesome" Size="22" Color="{StaticResource Primary}" Glyph="{x:Static local:IconFont.DiceTwo}" />
+    <FontImage x:Key="TabThree" FontFamily="FontAwesome" Size="22" Color="{StaticResource Primary}" Glyph="{x:Static local:IconFont.DiceThree}" />
+    <FontImage x:Key="TabFour" FontFamily="FontAwesome" Size="22" Color="{StaticResource Primary}" Glyph="{x:Static local:IconFont.DiceFour}" />
+    
 </ResourceDictionary>

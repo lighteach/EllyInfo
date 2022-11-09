@@ -15,7 +15,7 @@
 		<ApplicationTitle>EllyInfo</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.ellyinfo</ApplicationId>
+		<ApplicationId>com.lighteach.ellyinfo</ApplicationId>
 		<ApplicationIdGuid>D89257DD-6AA2-4AAD-AF23-E43061098B39</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -32,7 +32,8 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#8766CC" />
+		<!--<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#8766CC" />-->
+    <MauiIcon Include="Resources\AppIcon\icon_iconbackground.png" ForegroundFile="Resources\AppIcon\icon_ellyinfo_white.png" Color="#8766CC" />
 
     <!-- Splash Screen -->
     <!-- Grape : #8766CC -->

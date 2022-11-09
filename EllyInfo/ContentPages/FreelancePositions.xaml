@@ -18,7 +18,8 @@
                     <Label Grid.Row="1" Text="Collections of freelance positions site scraped" TextColor="Black" FontSize="14" HorizontalOptions="Fill" VerticalTextAlignment="Center" />
                 </Grid>
                 <!-- 우측 Provided by -->
-                <Border Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End" Stroke="{StaticResource NewTitleBar}" StrokeThickness="4" Background="#2B0B98" Padding="16,7,18,10" HeightRequest="50">
+                <Border Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End" Stroke="{StaticResource NewTitleBar}"
+                        StrokeThickness="4" Background="#2B0B98" Padding="16,7,18,10" HeightRequest="50">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="40,0,0,40" />
                     </Border.StrokeShape>
