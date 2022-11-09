@@ -72,9 +72,6 @@
 	  <MauiXaml Update="ContentPages\FreelancePositionsDetail.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ContentPages\FreelancePositionsTabbed.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="ContentPages\SkillManage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
