@@ -33,6 +33,8 @@
                 </Border>
             </Grid>
 
+            <Button x:Name="btnAlertTest" Text="이거슨 테스트 얼럿이다 눌러보거라!!" Clicked="btnAlertTest_Clicked" />
+
             <!-- 포지션 리스트 -->
 
             <CollectionView x:Name="collviewJobDatas" ItemsSource="{Binding JobDatas}" SelectionMode="Single" SelectionChanged="collviewJobDatas_SelectionChanged">
