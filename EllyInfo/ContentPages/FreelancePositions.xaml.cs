@@ -54,9 +54,4 @@ public partial class FreelancePositions : ContentPage, INotifyPropertyChanged
         await Application.Current.MainPage.Navigation.PushModalAsync(new FreelancePositionsDetail { TargetUrl = moveUrl });
         //await Launcher.Default.OpenAsync(moveUrl);
     }
-
-    private async void btnAlertTest_Clicked(object sender, EventArgs e)
-    {
-        await DisplayAlert("This is Test Alert", "이거슨 테스트 얼럿이다!!", "OK");
-    }
 }

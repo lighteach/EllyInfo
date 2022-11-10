@@ -14,6 +14,8 @@
                 </Grid>
             </Grid>
 
+            <Button x:Name="btnAlertTest" Text="이거슨 테스트 얼럿이다 눌러보거라!!" Clicked="btnAlertTest_Clicked" />
+
             <CollectionView>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
