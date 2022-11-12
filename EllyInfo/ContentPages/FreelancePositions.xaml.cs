@@ -1,4 +1,5 @@
 using DataLinkage;
+using Kotlin.Properties;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
@@ -15,6 +16,10 @@ public partial class FreelancePositions : ContentPage, INotifyPropertyChanged
         BindJobDatas();
 
         BindingContext = this;
+
+        string title = Shell.Current.CurrentItem.CurrentItem.CurrentItem.Title;
+        string route = Shell.Current.CurrentItem.CurrentItem.CurrentItem.Route;
+        lblCurrentProvider.Text = title;
     }
 
     private void BindJobDatas()
