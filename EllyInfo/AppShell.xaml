@@ -32,7 +32,6 @@
     </Shell.TitleView>
 
     <FlyoutItem Title="Freelance Positions" FlyoutIcon="dotnet_bot.png">
-        <!--<ShellContent Title="Freelance Positions" ContentTemplate="{DataTemplate localPage:FreelancePositions}"></ShellContent>-->
         <Tab Title="OKKY" Icon="{StaticResource IconOne}">
             <ShellContent Title="OKKY" ContentTemplate="{DataTemplate localPage:FreelancePositions}" Route="FreelancePositionsOkky"></ShellContent>
         </Tab>
@@ -44,7 +43,14 @@
         </Tab>
     </FlyoutItem>
     <FlyoutItem Title="Skill Manage" FlyoutIcon="dotnet_bot.png">
-        <ShellContent Title="Skill Manage" ContentTemplate="{DataTemplate localPage:SkillManage}"></ShellContent>
+        <!-- 한 페이지만 보여주고 싶으면 아래 한 라인 빼고 다른거 싹 다 삭제 ㅇㅋ? -->
+        <!--<ShellContent Title="Skill Manage" ContentTemplate="{DataTemplate localPage:SkillManage}"></ShellContent>-->
+        <Tab Title="Carrers List" Icon="{StaticResource IconOne}">
+            <ShellContent Title="Carrers List" ContentTemplate="{DataTemplate localPage:SkillManage}" Route="CareersList" />
+        </Tab>
+        <Tab Title="Career Management" Icon="{StaticResource IconTwo}">
+            <ShellContent Title="Career Management" ContentTemplate="{DataTemplate localPage:SkillManage}" Route="CareerManagement" />
+        </Tab>
     </FlyoutItem>    
     
 

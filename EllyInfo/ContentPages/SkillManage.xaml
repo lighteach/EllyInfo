@@ -3,29 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EllyInfo.ContentPages.SkillManage"
              Title="SkillManage">
-    <ScrollView>
-        <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10" Margin="15,15,15,15">
-            <!-- 상단 타이틀 패널 -->
-            <Grid ColumnDefinitions="*,Auto" Padding="0,15,0,15" HeightRequest="75">
-                <!-- 좌측 페이지 제목 -->
-                <Grid Grid.Column="0" HorizontalOptions="StartAndExpand" ColumnDefinitions="*" RowDefinitions="28,20" Padding="0,15,20,15" WidthRequest="360" HeightRequest="75">
-                    <Label Grid.Row="0" Text="Skill Manage" TextColor="Black" FontSize="25" HorizontalOptions="Fill" FontAttributes="Bold" />
-                    <Label Grid.Row="1" Text="Update current my skills or career" TextColor="Black" FontSize="14" HorizontalOptions="Fill" VerticalTextAlignment="Center" />
-                </Grid>
+    <VerticalStackLayout HorizontalOptions="Fill"  Spacing="10" Margin="15,15,15,15">
+        <!-- 상단 타이틀 패널 -->
+        <Grid ColumnDefinitions="*,Auto" Padding="0,15,0,15" HeightRequest="75">
+            <!-- 좌측 페이지 제목 -->
+            <Grid Grid.Column="0" HorizontalOptions="StartAndExpand" ColumnDefinitions="*" RowDefinitions="28,20" Padding="0,15,20,15" WidthRequest="360" HeightRequest="75">
+                <Label Grid.Row="0" Text="Skill Manage" TextColor="Black" FontSize="25" HorizontalOptions="Fill" FontAttributes="Bold" />
+                <Label Grid.Row="1" Text="Update current my skills or career" TextColor="Black" FontSize="14" HorizontalOptions="Fill" VerticalTextAlignment="Center" />
             </Grid>
+        </Grid>
+        <Button x:Name="btnAlertTest" Text="이거슨 테스트 얼럿이다 눌러보거라!!" Clicked="btnAlertTest_Clicked" />
 
-            <Button x:Name="btnAlertTest" Text="이거슨 테스트 얼럿이다 눌러보거라!!" Clicked="btnAlertTest_Clicked" />
-
-            <CollectionView>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Border Stroke="Black" StrokeThickness="1">
-                            
-                        </Border>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-            
-        </VerticalStackLayout>
-    </ScrollView>
+        <TableView x:Name="tvCareers" Intent="Menu">
+            <TableRoot>
+                <TableSection Title="Careers(경력사항)">
+                    <!--<TextCell Text="메르세데스벤츠코리아" Detail="RAS Truck/Van 업무 분리 작업" />
+                    <TextCell Text="코나아이" Detail="내부 어드민 화면 연동 API 개발" />
+                    <TextCell Text="빗썸" Detail="빗썸 Simple 앱 CMS 개발(FrontEnd/Server)" />
+                    <TextCell Text="신세계I&amp;C" Detail="신세계 Smart Kiosk &amp; Vending 리뉴얼 및 고도화 프로젝트" />
+                    <TextCell Text="파이서브" Detail="FCRM STR Report 프로젝트" />-->
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </VerticalStackLayout>
 </ContentPage>

@@ -5,3 +5,4 @@
 *.vsidx
 /.vs
 /EllyInfo/.vs
+/EllyInfo/*.user
