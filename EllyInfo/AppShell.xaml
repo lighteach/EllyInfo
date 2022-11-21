@@ -7,6 +7,7 @@
     xmlns:localPage="clr-namespace:EllyInfo.ContentPages"
     FlyoutIcon="icon_hamburger_menu.png"
     BackgroundColor="{StaticResource NewTitleBar}"
+    Shell.FlyoutBackdrop="{StaticResource NewTitleBar}"
     Shell.FlyoutBehavior="Flyout">
 
     <!-- 쉘에는 그라데이션이 쳐먹질 않음, 이미 깃허브에 해당 이슈가 버그로 등록되어 있음. 시간을 기다려보자.. -->

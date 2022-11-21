@@ -2,6 +2,9 @@ using System.Reflection;
 using Microsoft.Maui;
 using EllyInfo.Models;
 using Newtonsoft.Json;
+using System.Collections.ObjectModel;
+using Microsoft.Maui.Controls.Compatibility;
+using System;
 
 namespace EllyInfo.ContentPages;
 
@@ -12,43 +15,42 @@ public partial class SkillManage : ContentPage
 		InitializeComponent();
 
         BindCareers();
-	}
 
-    private async void BindCareers()
+        BindingContext = this;
+    }
+
+    private void BindCareers()
     {
-        await Task.Run(async () =>
+        using (Stream strmJson = FileSystem.Current.OpenAppPackageFileAsync("SkillsInformation.json").GetAwaiter().GetResult())
         {
-
-            using (Stream strmJson = await FileSystem.Current.OpenAppPackageFileAsync("SkillsInformation.json"))
+            if (strmJson != null)
             {
-                if (strmJson != null)
+                using (StreamReader sr = new StreamReader(strmJson))
                 {
-                    using (StreamReader sr = new StreamReader(strmJson))
+                    string jsonContent = sr.ReadToEnd();
+                    SkillsInformation skillInfo = skillInfo = JsonConvert.DeserializeObject<SkillsInformation>(jsonContent);
+
+                    foreach (CareerList cl in skillInfo.CareerList)
                     {
-                        string jsonContent = sr.ReadToEnd();
-                        SkillsInformation skillInfo = skillInfo = JsonConvert.DeserializeObject<SkillsInformation>(jsonContent);
-
-                        TableView tmp = this.tvCareers;
-
-                        TableSection tbSection = tvCareers.Root.First();
-                        // [2022-11-20] 이 부분에서 오류나서 경력 히스토리를 추가시키지 못함 니기미..
-                        //foreach (CareerList cl in skillInfo.CareerList)
-                        //{
-                        //    tbSection.Add(new TextCell
-                        //    {
-                        //        Text = cl.CorpName
-                        //        , Detail = cl.Works
-                        //    });
-                        //}
+                        _careers.Add(new CareerList
+                        {
+                            CorpName = cl.CorpName
+                            , StartYm = cl.StartYm
+                            , EndYm = cl.EndYm
+                            , Position = cl.Position
+                            , Works = cl.Works
+                        });
                     }
+                    _careers = new ObservableCollection<CareerList>(skillInfo.CareerList);
                 }
             }
-
-
-
-        });
-
+        }
     }
+
+    ObservableCollection<CareerList> _careers = new ObservableCollection<CareerList>();
+    public ObservableCollection<CareerList> Careers => _careers;
+
+    
 
     private async void btnAlertTest_Clicked(object sender, EventArgs e)
     {
