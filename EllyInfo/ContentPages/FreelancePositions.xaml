@@ -41,6 +41,8 @@
                 </Border>
             </Grid>
 
+            <ActivityIndicator x:Name="indicator" VerticalOptions="CenterAndExpand"  Color="Blue" IsRunning="False" IsVisible="False" />
+            
             <!-- 포지션 리스트 -->
             <CollectionView x:Name="collviewJobDatas" ItemsSource="{Binding JobDatas}" SelectionMode="Single" SelectionChanged="collviewJobDatas_SelectionChanged">
                 <CollectionView.ItemTemplate>
@@ -81,6 +83,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

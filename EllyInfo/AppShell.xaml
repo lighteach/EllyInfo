@@ -34,13 +34,13 @@
 
     <FlyoutItem Title="Freelance Positions" FlyoutIcon="dotnet_bot.png">
         <Tab Title="OKKY" Icon="{StaticResource IconOne}">
-            <ShellContent Title="OKKY" ContentTemplate="{DataTemplate localPage:FreelancePositions}" Route="FreelancePositionsOkky"></ShellContent>
+            <ShellContent Title="OKKY" ContentTemplate="{DataTemplate localPage:FreelancePositions}" Route="Okky"></ShellContent>
         </Tab>
         <Tab Title="WishCat" Icon="{StaticResource IconTwo}">
-            <ShellContent Title="WishCat" ContentTemplate="{DataTemplate localPage:FreelancePositions}" Route="FreelancePositionsWishCat"></ShellContent>
+            <ShellContent Title="WishCat" ContentTemplate="{DataTemplate localPage:FreelancePositions}" Route="WishCat"></ShellContent>
         </Tab>
         <Tab Title="JobKorea" Icon="{StaticResource IconThree}">
-            <ShellContent Title="JobKorea" ContentTemplate="{DataTemplate localPage:FreelancePositions}" Route="FreelancePositionsJobKorea"></ShellContent>
+            <ShellContent Title="JobKorea" ContentTemplate="{DataTemplate localPage:FreelancePositions}" Route="JobKorea"></ShellContent>
         </Tab>
     </FlyoutItem>
     <FlyoutItem Title="Skill Manage" FlyoutIcon="dotnet_bot.png">

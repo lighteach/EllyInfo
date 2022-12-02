@@ -12,19 +12,40 @@ public partial class FreelancePositions : ContentPage, INotifyPropertyChanged
 	{
 		InitializeComponent();
 
-        BindJobDatas();
-
         BindingContext = this;
 
         string title = Shell.Current.CurrentItem.CurrentItem.CurrentItem.Title;
         string route = Shell.Current.CurrentItem.CurrentItem.CurrentItem.Route;
         lblCurrentProvider.Text = title;
+
+        DataDirection direction = (DataDirection)Enum.Parse(typeof(DataDirection), route, true);
+
+        BindJobDatas(direction);
     }
 
-    private void BindJobDatas()
+    private void IndicatorShow(bool isShow)
     {
-        // 일단 현재 포지션 제공자가 누군지 저장한다.
-        _currentLinkage = new OkkyDataLinkage();
+        indicator.IsRunning = isShow;
+        indicator.IsVisible = isShow;
+    }
+
+    private void BindJobDatas(DataDirection direction)
+    {
+        IndicatorShow(true);
+
+        if (direction == DataDirection.Okky)
+        {
+            // 일단 현재 포지션 제공자가 누군지 저장한다.
+            _currentLinkage = new OkkyDataLinkage();
+        }
+        else if (direction == DataDirection.WishCat)
+        {
+            _currentLinkage = new WishCatDataLinkage();
+        }
+        else
+        {
+            _currentLinkage = new OkkyDataLinkage();
+        }
 
         IJobDataLinkage linkage = _currentLinkage;
         List<JobDataModel> list = linkage.GetList();
@@ -46,6 +67,8 @@ public partial class FreelancePositions : ContentPage, INotifyPropertyChanged
                 , EtcInfos = jdm.EtcInfos
             });
         }
+
+        IndicatorShow(false);
     }
 
     ObservableCollection<JobDataModel> _jobDatas = new ObservableCollection<JobDataModel>();
