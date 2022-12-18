@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 using Microsoft.Maui.Controls.Compatibility;
 using System;
+using EllyInfo.Models.ModalModes;
 
 namespace EllyInfo.ContentPages;
 
@@ -52,8 +53,9 @@ public partial class SkillManage : ContentPage
 
     
 
-    private async void btnAlertTest_Clicked(object sender, EventArgs e)
+    private async void btnSkillAdd_Clicked(object sender, EventArgs e)
     {
-        await DisplayAlert("This is Test Alert", "이거슨 테스트 얼럿이다!!", "OK");
+        await Application.Current.MainPage.Navigation.PushModalAsync(new SkillManageCrudModal { OpenMode = SkillManageModalOpen.Add });
+        //await DisplayAlert("This is Test Alert", "이거슨 테스트 얼럿이다!!", "OK");
     }
 }

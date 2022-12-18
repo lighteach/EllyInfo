@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EllyInfo.ContentPages.SkillManageCrudModal"
+             Title="Skills CRUD">
+    <ScrollView>
+        <VerticalStackLayout Margin="15,15,15,15">
+            <HorizontalStackLayout>
+                <!-- 여기다가 탭 버튼을 추가하고 OKKY, 위시캣 같은 포지션 리스트 제공자들을 버튼으로 넣어보자 -->
+            </HorizontalStackLayout>
+            <!-- 상단 타이틀 패널 -->
+            <Grid ColumnDefinitions="*,Auto" Padding="0,15,0,5" HeightRequest="75">
+                <!-- 좌측 페이지 제목 -->
+                <Grid Grid.Column="0" HorizontalOptions="StartAndExpand" VerticalOptions="Center" ColumnDefinitions="*" RowDefinitions="28" Padding="0,15,20,15" WidthRequest="360" HeightRequest="75">
+                    <Label x:Name="lblTitleText" Grid.Row="0" Text="" TextColor="Black" FontSize="25" HorizontalOptions="Fill" FontAttributes="Bold" VerticalOptions="Center" VerticalTextAlignment="Center" />
+                </Grid>
+                <!-- 우측 닫기 버튼 -->
+                <Button Grid.Column="1" x:Name="btnClose" Text="X" FontSize="32"
+                        Padding="10,0,10,0" TextColor="Black"
+                        HorizontalOptions="EndAndExpand" VerticalOptions="Start"
+                         BorderColor="Transparent" BackgroundColor="Transparent"
+                        Clicked="btnClose_Clicked" />
+            </Grid>
+            
+            <!--<WebView x:Name="wvDetail" HorizontalOptions="Center" VerticalOptions="StartAndExpand" />-->
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

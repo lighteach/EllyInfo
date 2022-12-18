@@ -13,7 +13,7 @@
                     <Label Grid.Row="1" Text="Update current my skills or career" TextColor="Black" FontSize="14" HorizontalOptions="Fill" VerticalTextAlignment="Center" />
                 </Grid>
             </Grid>
-            <Button x:Name="btnAlertTest" Text="이거슨 테스트 얼럿이다 눌러보거라!!" Clicked="btnAlertTest_Clicked" />
+            <Button x:Name="btnSkillAdd" Text="스킬 추가 시키기" Clicked="btnSkillAdd_Clicked" />
 
             <Label Text="Careers(경력사항)" />
             <CollectionView x:Name="collviewCareers" ItemsSource="{Binding Careers}" SelectionMode="Single">
