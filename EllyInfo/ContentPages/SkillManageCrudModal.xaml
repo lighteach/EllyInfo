@@ -21,6 +21,10 @@
                          BorderColor="Transparent" BackgroundColor="Transparent"
                         Clicked="btnClose_Clicked" />
             </Grid>
+
+            <Grid ColumnDefinitions="Auto" RowDefinitions="40,*" Padding="20,20,20,20" HeightRequest="200" BackgroundColor="White">
+                <Label x:Name="lblTempText" Text="이력작성하기" FontSize="30" />
+            </Grid>
             
             <!--<WebView x:Name="wvDetail" HorizontalOptions="Center" VerticalOptions="StartAndExpand" />-->
         </VerticalStackLayout>

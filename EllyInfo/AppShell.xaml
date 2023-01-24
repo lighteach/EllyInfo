@@ -52,7 +52,10 @@
         <Tab Title="Career Management" Icon="{StaticResource IconTwo}">
             <ShellContent Title="Career Management" ContentTemplate="{DataTemplate localPage:SkillManage}" Route="CareerManagement" />
         </Tab>
-    </FlyoutItem>    
+    </FlyoutItem>
+    <FlyoutItem Title="Chat GPT-3(OpenAi)" FlyoutIcon="dotnet_bot.png">
+        <ShellContent Title="Chat GPT-3(OpenAi)" ContentTemplate="{DataTemplate localPage:ChatGpt}" Route="ChatGpt" />
+    </FlyoutItem>
     
 
     <!--<ShellContent

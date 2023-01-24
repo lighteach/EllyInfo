@@ -66,6 +66,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="ContentPages\ChatGpt.xaml.cs">
+	    <DependentUpon>ChatGpt.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="ContentPages\SkillManageCrudModal.xaml.cs">
 	    <DependentUpon>SkillManageCrudModal.xaml</DependentUpon>
 	  </Compile>
@@ -73,6 +76,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="ContentPages\FreelancePositions.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ContentPages\ChatGpt.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ContentPages\SkillManageCrudModal.xaml">
